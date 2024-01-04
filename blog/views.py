@@ -1,8 +1,9 @@
 from django.shortcuts import render
+from .models import Post
 
 
 def home(requests):
-    context = {'title':"HOME PAGE!",'value':"THIS IS HOME PAGE!pp"}
+    context = {'posts':Post.objects.all()}
     return render(requests,'blog/home.html',context)
 
 def about(requests):
