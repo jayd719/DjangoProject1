@@ -1,0 +1,10 @@
+{% extends "blog/base.html" %} 
+{% block content %}
+<div class="content">
+    <h1>you have been logged out</h1>
+    {% csrf_token %}
+    <div class="border-top tp-3">
+        <small class="text-muted">Log in again <a class="ml-2" href="{% url 'login' %}">Sign In</a></small>
+    </div>
+</div>
+{% endblock%}

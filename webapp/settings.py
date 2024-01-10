@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-8j=@1i(p%8^wfs!lia@g1gf24#@p+vw4w_9l92m(!eo77*t&4*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -129,3 +129,6 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL='login'
