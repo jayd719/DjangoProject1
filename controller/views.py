@@ -16,6 +16,11 @@ def controller(requests):
         
         if requests.POST.get("blink") == "blink":
             fh.write('blink')
+        
+        if requests.POST.get("count-binary") == "count-binary":
+            fh.write('blink')
+
+
    
 
 
