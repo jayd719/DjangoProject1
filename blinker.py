@@ -9,6 +9,11 @@ l3= LED(27)
 
 LEDS =[l1,l2,l3]
 
+def ON():
+    i =0
+    for each in LEDS:
+        LEDS[i].on()
+
 
 c = True
 i=0
@@ -16,9 +21,7 @@ while True:
     fh = open('ins.txt','r',encoding='utf-8')
     inst = fh.readline()
     if(inst=='on'):
-        LEDS[0].on()
-        LEDS[1].on()
-        LEDS[2].on()
+        ON()
        
     elif (inst =='off'):
           LEDS[0].off()
