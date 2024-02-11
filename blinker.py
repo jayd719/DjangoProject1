@@ -10,20 +10,21 @@ LEDS =[l1]
 
 
 c = True
+i=0
 while True:
     fh = open('ins.txt','r',encoding='utf-8')
     inst = fh.readline()
     if(inst=='on'):
-        LEDS[0].on()
+        LEDS[i].on()
        
     elif (inst =='off'):
-          LEDS[0].off()
+          LEDS[i].off()
         
     elif(inst=='blink'):
         if c:
-            l1.on()
+            LEDS[i].on()
         else:
-            l1.off()
+            LEDS[i].on()
         c=not c
     
    
