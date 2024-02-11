@@ -1,3 +1,4 @@
+print(str(bin(2)))
 from gpiozero import LED
 from time import sleep
 
@@ -9,7 +10,7 @@ LEDS=[LED(17),LED(27),LED(22)]
 def countdown(time):
     while(time>=0):
         i = 0
-        for ch in str(bin(time)):
+        for ch in str(bin(time)[2:]):
             if ch=='1':
                 LEDS[i].on()
             else:
@@ -18,6 +19,7 @@ def countdown(time):
         
         print(time)
        
+
 
 def allOff():
     for led in LEDS:
