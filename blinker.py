@@ -31,9 +31,11 @@ while True:
         
     elif(inst=='blink'):
         if c:
-            LEDS[i].on()
+            LEDS[0].off()
+            LEDS[0].on()
         else:
-            LEDS[i].off()
+            LEDS[0].off()
+            LEDS[0].on()
         c=not c
     
    
