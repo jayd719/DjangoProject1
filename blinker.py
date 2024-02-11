@@ -3,10 +3,10 @@ from gpiozero import LED
 from time import sleep
 
 l1= LED(17)
-l2 =LED(27)
-l3 =LED(22)
+# l2 =LED(27)
+# l3 =LED(22)
 
-LEDS=[l1,l2,l3]
+LEDS=[l1]
 
 
 def countdown(time):
@@ -56,17 +56,13 @@ while True:
         fh.close()
     
     elif(inst=='hold'):
+        fh.close()
         allOn()
         sleep(5)
         allOff()
-        fh.close()
         fh= open('ins.txt','w',encoding='utf-8')
-        countdown(9)
         fh.write('on')
         fh.close()
-
-
-
 
     sleep(.1)
     fh.close()
