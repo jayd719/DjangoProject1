@@ -33,9 +33,11 @@ while True:
         if c:
             LEDS[0].off()
             LEDS[1].on()
+            LEDS[2].off()
         else:
             LEDS[1].off()
             LEDS[0].on()
+            LEDS[2].on()
         c=not c
     
    
