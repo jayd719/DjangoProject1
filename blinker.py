@@ -6,6 +6,7 @@ l1= LED(17)
 
 
 
+LEDS =[l1]
 
 
 c = True
@@ -13,10 +14,10 @@ while True:
     fh = open('ins.txt','r',encoding='utf-8')
     inst = fh.readline()
     if(inst=='on'):
-        l1.on()
+        LEDS[0].on()
        
     elif (inst =='off'):
-         l1.off()
+          LEDS[0].off()
         
     elif(inst=='blink'):
         if c:
