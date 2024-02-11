@@ -6,7 +6,7 @@ l1= LED(17)
 l2 =LED(27)
 l3 =LED(22)
 
-LEDS=[l3,l3,l3]
+LEDS=[l1,l2,l3]
 
 
 def countdown(time):
@@ -26,6 +26,7 @@ def countdown(time):
 def allOff():
     for led in LEDS:
         led.off()
+
 def allOn():
     for led in LEDS:
         led.off()
@@ -35,8 +36,10 @@ while True:
     fh = open('ins.txt','r',encoding='utf-8')
     inst = fh.readline()
     if(inst=='on'):
+        l1.on()
         allOn()
     elif (inst =='off'):
+         l1.off()
          allOff()
     elif(inst=='blink'):
         if c:
