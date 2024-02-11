@@ -16,6 +16,17 @@ def ON():
         i+=1
 
 
+def countdown(t):
+    while(t>0):
+        i =0
+        for ch in str(bin(t))[:2]:
+            if ch=='1':
+                LEDS[i].on()
+            else:
+                LEDS[i].off()
+            i+=1
+        sleep(1)
+
 c = True
 i=0
 while True:
@@ -39,6 +50,13 @@ while True:
             LEDS[0].on()
             LEDS[2].on()
         c=not c
+
+    elif(inst == 'count'):
+        fh.close()
+        fh=open('ins.txt','w',encoding='utf-8')
+        countdown(9)
+        fh.write('on')
+
     
    
 
