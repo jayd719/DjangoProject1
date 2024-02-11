@@ -3,8 +3,9 @@ from gpiozero import LED
 
 def controller(requests):
    
-    led = LED(17)
+    
     if requests.method == 'POST':
+        led = LED(17)
         if requests.POST.get("turnOFF") == "turnOFF":
             led.off()
         
