@@ -13,6 +13,7 @@ def ON():
     i =0
     for each in LEDS:
         LEDS[i].on()
+        i+=1
 
 
 c = True
