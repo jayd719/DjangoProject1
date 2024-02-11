@@ -1,7 +1,7 @@
 from gpiozero import LED
 from time import sleep
 
-led = LED(17)
+
 
 LEDS=[LED(17),LED(27),LED(22)]
 
@@ -19,21 +19,26 @@ def countdown(time):
         print(time)
        
 
- 
+def allOff():
+    for led in LEDS:
+        led.off()
+def allOn():
+    for led in LEDS:
+        led.off()
 
 c = True
 while True:
     fh = open('ins.txt','r',encoding='utf-8')
     inst = fh.readline()
     if(inst=='on'):
-        led.on()
+        allOn()
     elif (inst =='off'):
-         led.off()
+         allOff()
     elif(inst=='blink'):
         if c:
-            led.off()
+            allOff()
         else:
-            led.on()
+            allOn()
         c=not c
     
     elif(inst=='count-binary'):
@@ -42,6 +47,12 @@ while True:
         countdown(9)
         fh.write('on')
         fh.close()
+    
+    elif(inst=='hold'):
+        allOn()
+        sleep(5)
+        allOff()
+
 
 
 
