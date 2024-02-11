@@ -26,6 +26,7 @@ def countdown(t):
                 LEDS[i].off()
             i+=1
         sleep(1)
+        t=t-1
 
 c = True
 i=0
