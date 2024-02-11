@@ -52,6 +52,11 @@ while True:
         allOn()
         sleep(5)
         allOff()
+        fh.close()
+        fh= open('ins.txt','w',encoding='utf-8')
+        countdown(9)
+        fh.write('on')
+        fh.close()
 
 
 
