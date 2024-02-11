@@ -18,7 +18,10 @@ def controller(requests):
             fh.write('blink')
         
         if requests.POST.get("count-binary") == "count-binary":
-            fh.write('blink')
+            fh.write('count')
+        
+        if requests.POST.get("hold") == "hold":
+            fh.write('hold')
 
 
    
