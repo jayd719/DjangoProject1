@@ -2,9 +2,11 @@ print(str(bin(2)))
 from gpiozero import LED
 from time import sleep
 
+l1= LED(17)
+l2 =LED(27)
+l3 =LED(22)
 
-
-LEDS=[LED(17),LED(27),LED(22)]
+LEDS=[l3,l3,l3]
 
 
 def countdown(time):
