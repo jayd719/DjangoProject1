@@ -9,5 +9,5 @@ while True:
         led.on()
     else:
         led.off()
-    sleep(.25)
+    sleep(.3)
     fh.close()
