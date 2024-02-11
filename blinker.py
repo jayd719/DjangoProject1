@@ -29,7 +29,7 @@ while True:
         if c:
             LEDS[i].on()
         else:
-            LEDS[i].on()
+            LEDS[i].off()
         c=not c
     
    
