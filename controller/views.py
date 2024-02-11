@@ -13,7 +13,9 @@ def controller(requests):
 
         if requests.POST.get("turnON") == "turnON":
             fh.write('on')
-           
+        
+        if requests.POST.get("blink") == "blink":
+            fh.write('blink')
    
 
 
