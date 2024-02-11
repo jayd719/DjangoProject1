@@ -1,17 +1,19 @@
 from django.shortcuts import render
-from gpiozero import LED
 
 def controller(requests):
    
     
+
     if requests.method == 'POST':
-        led = LED(17)
+        fh = open('ins.txt','w',encoding='utf-8')
+        
         if requests.POST.get("turnOFF") == "turnOFF":
-            led.off()
+            fh.write('off')
         
 
         if requests.POST.get("turnON") == "turnON":
-            led.on()
+            fh.write('on')
+           
    
 
 
